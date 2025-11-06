@@ -1,0 +1,10 @@
+{
+  "navigation.newPosts": "New Posts",
+  "navigation.topPosts": "Top Posts",
+  "newPosts.title": "New Posts",
+  "newPosts.description": "Latest posts",
+  "topPosts.title": "Top Posts",
+  "topPosts.description": "Most popular",
+  "notFound.title": "404",
+  "notFound.goBack": "Go back to home"
+}

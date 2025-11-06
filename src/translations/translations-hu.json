@@ -1,0 +1,10 @@
+{
+  "navigation.newPosts": "Új Bejegyzések",
+  "navigation.topPosts": "Top Bejegyzések",
+  "newPosts.title": "Új Bejegyzések",
+  "newPosts.description": "Legfrissebb bejegyzések ",
+  "topPosts.title": "Top Bejegyzések",
+  "topPosts.description": "Legnépszerűbb bejegyzések",
+  "notFound.title": "404",
+  "notFound.goBack": "Vissza a főoldalra"
+}
