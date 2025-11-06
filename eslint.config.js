@@ -29,6 +29,7 @@ export default [
         navigator: 'readonly',
         console: 'readonly',
         process: 'readonly',
+        localStorage: 'readonly',
       },
     },
     settings: {

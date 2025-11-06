@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
-import { RouterProvider } from 'react-router-dom'
 import store from '@/store'
 import { initApp } from '@/store/actions/appActions'
-import { router } from '@/routes'
 import IntlProviderWrapper from '@/components/IntlProviderWrapper/IntlProviderWrapper'
 import MuiThemeProvider from '@/components/MuiThemeProvider/MuiThemeProvider'
+import AppRoot from '@/components/AppRoot/AppRoot'
 import './main.css'
 
 store.dispatch(initApp())
@@ -16,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <MuiThemeProvider>
         <IntlProviderWrapper>
-          <RouterProvider router={router} />
+          <AppRoot />
         </IntlProviderWrapper>
       </MuiThemeProvider>
     </Provider>

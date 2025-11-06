@@ -1,7 +1,8 @@
 import { Button } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectLanguage, setLanguage } from '@/store/reducers/settings'
+import { selectLanguage } from '@/store/reducers/settings/settings-selectors'
+import { setLanguage } from '@/store/reducers/settings/settings-actions'
 
 function LanguageSelector() {
   const currentLanguage = useSelector(selectLanguage)

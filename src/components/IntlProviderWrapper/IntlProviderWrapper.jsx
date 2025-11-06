@@ -1,6 +1,6 @@
 import { IntlProvider } from 'react-intl'
 import { useSelector } from 'react-redux'
-import { selectLanguage } from '@/store/reducers/settings'
+import { selectLanguage } from '@/store/reducers/settings/settings-selectors'
 import translationsEn from '@/translations/translations-en.json'
 import translationsHu from '@/translations/translations-hu.json'
 

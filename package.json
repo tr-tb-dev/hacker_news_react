@@ -1,7 +1,7 @@
 {
-  "name": "Genesys",
+  "name": "genesys-homeassesment",
   "version": "1.0.0",
-  "description": "Genesys - Home Assignment",
+  "description": "Modernized Hacker News with React and Redux Saga",
   "type": "module",
   "scripts": {
     "dev": "vite",

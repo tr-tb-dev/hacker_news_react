@@ -1,8 +1,8 @@
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { useSelector } from 'react-redux'
-import { selectTheme } from '@/store/reducers/settings'
-import { lightTheme, darkTheme } from '@/theme'
+import { selectTheme } from '@/store/reducers/settings/settings-selectors'
+import { lightTheme, darkTheme } from '@/theme/theme'
 
 function MuiThemeProvider({ children }) {
   const themeMode = useSelector(selectTheme)

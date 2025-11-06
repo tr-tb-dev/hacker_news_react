@@ -2,7 +2,8 @@ import { IconButton } from '@mui/material'
 import { Brightness4, Brightness7 } from '@mui/icons-material'
 import { useTheme } from '@mui/material/styles'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectTheme, setTheme } from '@/store/reducers/settings'
+import { selectTheme } from '@/store/reducers/settings/settings-selectors'
+import { setTheme } from '@/store/reducers/settings/settings-actions'
 
 function ThemeToggle() {
   const themeMode = useSelector(selectTheme)
