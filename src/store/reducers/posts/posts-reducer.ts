@@ -23,6 +23,7 @@ const initialState: PostsState = {
   totalPages: 0,
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type PostsAction = Action<any>;
 
 const _fetchPosts = (state: PostsState, action: PostsAction): PostsState => ({

@@ -1,6 +1,7 @@
 export interface Action<T = unknown> {
   type: string;
   payload?: T;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
