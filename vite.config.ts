@@ -15,6 +15,9 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, './src'),
       },
     },
+    optimizeDeps: {
+      include: ['@mui/material', '@mui/icons-material'],
+    },
     css: {
       modules: {
         localsConvention: 'camelCase',
@@ -26,6 +29,28 @@ export default defineConfig(({ mode }) => {
           additionalData: `@use "sass:math";`,
           api: 'modern-compiler',
         },
+      },
+    },
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './vitest.setup.ts',
+      include: ['src/**/__tests__/**/*.test.{ts,tsx}'],
+      pool: 'threads',
+      poolOptions: {
+        threads: {
+          singleThread: true,
+        },
+      },
+      coverage: {
+        provider: 'v8',
+        reporter: ['text', 'json', 'html'],
+        exclude: [
+          'node_modules/',
+          'src/**/*.d.ts',
+          'src/main.tsx',
+          'src/vite-env.d.ts',
+        ],
       },
     },
   };
