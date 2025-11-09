@@ -16,7 +16,12 @@ function ViewModeToggle() {
   };
 
   return (
-    <IconButton onClick={handleToggle} color="inherit">
+    <IconButton
+      onClick={handleToggle}
+      color="inherit"
+      data-testid="view-mode-toggle-button"
+      aria-label="toggle view mode"
+    >
       {viewMode === ViewMode.List ? <ViewModuleIcon /> : <ViewListIcon />}
     </IconButton>
   );

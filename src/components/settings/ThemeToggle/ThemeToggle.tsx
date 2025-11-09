@@ -20,6 +20,7 @@ function ThemeToggle() {
     <IconButton
       onClick={handleToggle}
       aria-label="toggle theme"
+      data-testid="theme-toggle-button"
       sx={{
         color: theme.palette.navigation.text,
         backgroundColor: 'transparent',

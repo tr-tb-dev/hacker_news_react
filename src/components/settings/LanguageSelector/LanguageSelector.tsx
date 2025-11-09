@@ -19,6 +19,7 @@ function LanguageSelector() {
     <Button
       onClick={handleToggle}
       aria-label="toggle language"
+      data-testid="language-selector-button"
       sx={{
         color: theme.palette.navigation.text,
         fontWeight: 'bold',

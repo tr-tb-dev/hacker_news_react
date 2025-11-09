@@ -22,6 +22,7 @@ function FontSizeToggle() {
     <IconButton
       onClick={handleToggle}
       aria-label={intl.formatMessage({ id: 'settings.fontSize.toggle' })}
+      data-testid="font-size-toggle-button"
       sx={{
         color: theme.palette.navigation.text,
         backgroundColor: 'transparent',
