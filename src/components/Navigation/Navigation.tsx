@@ -1,13 +1,15 @@
-import { Link, useLocation } from 'react-router-dom'
-import { FormattedMessage } from 'react-intl'
-import { AppBar, Toolbar, Button, Box } from '@mui/material'
-import { useTheme } from '@mui/material/styles'
-import ThemeToggle from '@/components/ThemeToggle/ThemeToggle'
-import LanguageSelector from '@/components/LanguageSelector/LanguageSelector'
+import { Link, useLocation } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+import { AppBar, Toolbar, Button, Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import ViewModeToggle from '@/components/settings/ViewModeToggle/ViewModeToggle';
+import ThemeToggle from '@/components/settings/ThemeToggle/ThemeToggle';
+import LanguageSelector from '@/components/settings/LanguageSelector/LanguageSelector';
+import FontSizeToggle from '@/components/settings/FontSizeToggle/FontSizeToggle';
 
 function Navigation() {
-  const theme = useTheme()
-  const location = useLocation()
+  const theme = useTheme();
+  const location = useLocation();
 
   return (
     <AppBar
@@ -66,12 +68,14 @@ function Navigation() {
         </Box>
 
         <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+          <ViewModeToggle />
+          <FontSizeToggle />
           <LanguageSelector />
           <ThemeToggle />
         </Box>
       </Toolbar>
     </AppBar>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;

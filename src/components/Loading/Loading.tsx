@@ -1,8 +1,8 @@
-import { Box, CircularProgress } from '@mui/material'
-import { useTheme } from '@mui/material/styles'
+import { Box, CircularProgress } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 function Loading() {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Box
@@ -21,7 +21,7 @@ function Loading() {
         }}
       />
     </Box>
-  )
+  );
 }
 
-export default Loading
+export default Loading;

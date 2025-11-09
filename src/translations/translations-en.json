@@ -6,5 +6,13 @@
   "topPosts.title": "Top Posts",
   "topPosts.description": "Most popular",
   "notFound.title": "404",
-  "notFound.goBack": "Go back to home"
+  "notFound.goBack": "Go back to home",
+  "pagination.previous": "Previous",
+  "pagination.next": "Next",
+  "pagination.pageOf": "Page {current} of {total}",
+  "settings.fontSize.toggle": "Toggle font size",
+  "time.justNow": "just now",
+  "time.minutesAgo": "{minutes, plural, one {# minute ago} other {# minutes ago}}",
+  "time.hoursAgo": "{hours, plural, one {# hour ago} other {# hours ago}}",
+  "time.daysAgo": "{days, plural, one {# day ago} other {# days ago}}"
 }

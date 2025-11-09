@@ -1,8 +1,8 @@
-import { createBrowserRouter } from 'react-router-dom'
-import Layout from '@/components/Layout/Layout'
-import NewPosts from '@/pages/NewPosts'
-import TopPosts from '@/pages/TopPosts'
-import NotFound from '@/pages/NotFound'
+import { createBrowserRouter } from 'react-router-dom';
+import Layout from '@/components/Layout/Layout';
+import NewPosts from '@/pages/NewPosts';
+import TopPosts from '@/pages/TopPosts';
+import NotFound from '@/pages/NotFound';
 
 export const router = createBrowserRouter(
   [
@@ -28,4 +28,4 @@ export const router = createBrowserRouter(
   {
     basename: import.meta.env.BASE_URL,
   }
-)
+);

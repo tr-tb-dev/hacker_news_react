@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 function NotFound() {
   return (
@@ -11,7 +11,7 @@ function NotFound() {
         <FormattedMessage id="notFound.goBack" />
       </Link>
     </div>
-  )
+  );
 }
 
-export default NotFound
+export default NotFound;

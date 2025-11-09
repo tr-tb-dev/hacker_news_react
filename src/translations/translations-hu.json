@@ -6,5 +6,13 @@
   "topPosts.title": "Top Bejegyzések",
   "topPosts.description": "Legnépszerűbb bejegyzések",
   "notFound.title": "404",
-  "notFound.goBack": "Vissza a főoldalra"
+  "notFound.goBack": "Vissza a főoldalra",
+  "pagination.previous": "Előző",
+  "pagination.next": "Következő",
+  "pagination.pageOf": "Oldal {current} / {total}",
+  "settings.fontSize.toggle": "Betűméret váltása",
+  "time.justNow": "épp most",
+  "time.minutesAgo": "{minutes, plural, one {# perce} other {# perce}}",
+  "time.hoursAgo": "{hours, plural, one {# órája} other {# órája}}",
+  "time.daysAgo": "{days, plural, one {# napja} other {# napja}}"
 }

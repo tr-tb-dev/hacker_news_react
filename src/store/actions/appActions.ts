@@ -1,4 +1,4 @@
-import { makeActionCreator } from '@/utils/actions/makeActionCreator'
+import { makeActionCreator } from '@/helpers/actionHelper';
 
-export const initApp = makeActionCreator('APP_INIT')
-export const dataLoaded = makeActionCreator('APP_DATA_LOADED')
+export const initApp = makeActionCreator('APP_INIT');
+export const dataLoaded = makeActionCreator('APP_DATA_LOADED');

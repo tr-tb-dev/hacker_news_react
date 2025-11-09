@@ -1,0 +1,38 @@
+import { Box, Button, Typography } from '@mui/material';
+import { FormattedMessage } from 'react-intl';
+
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
+function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      onPageChange(currentPage - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      onPageChange(currentPage + 1);
+    }
+  };
+
+  return (
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2, my: 3 }}>
+      <Button variant="outlined" onClick={handlePrevious} disabled={currentPage === 1}>
+        <FormattedMessage id="pagination.previous" />
+      </Button>
+      <Typography variant="body1">
+        <FormattedMessage id="pagination.pageOf" values={{ current: currentPage, total: totalPages }} />
+      </Typography>
+      <Button variant="outlined" onClick={handleNext} disabled={currentPage === totalPages}>
+        <FormattedMessage id="pagination.next" />
+      </Button>
+    </Box>
+  );
+}
+
+export default Pagination;

@@ -1,3 +1,3 @@
-import { RootState } from '@/store'
+import { RootState } from '@/store';
 
-export const selectIsLoading = (state: RootState) => state.app.isLoading
+export const selectIsLoading = (state: RootState) => state.app.isLoading;

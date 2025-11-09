@@ -30,6 +30,7 @@
     "@reduxjs/toolkit": "^2.10.1",
     "@vitejs/plugin-react": "^5.1.0",
     "classnames": "^2.5.1",
+    "firebase": "^12.5.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-intl": "^7.1.14",
