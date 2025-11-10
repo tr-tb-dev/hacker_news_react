@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Home Page', () => {
   test('should load the home page and display posts', async ({ page }) => {
-    await page.goto('/', { waitUntil: 'networkidle' });
+    await page.goto('/');
 
     await page.waitForSelector('[data-testid="post-list-item"], [data-testid="post-grid-item"]', {
       timeout: 30000,
@@ -13,7 +13,7 @@ test.describe('Home Page', () => {
   });
 
   test('should navigate to post comments from top page', async ({ page }) => {
-    await page.goto('/top', { waitUntil: 'networkidle' });
+    await page.goto('/top');
 
     await page.waitForSelector('[data-testid="post-list-item"], [data-testid="post-grid-item"]', {
       timeout: 30000,

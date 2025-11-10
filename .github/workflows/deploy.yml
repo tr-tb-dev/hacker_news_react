@@ -143,10 +143,15 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install chromium --with-deps
 
+      - name: Debug - Show URL
+        run: |
+          echo "Testing URL: ${{ needs.deploy.outputs.page_url }}"
+          echo "PLAYWRIGHT_BASE_URL will be set to: ${{ needs.deploy.outputs.page_url }}"
+
       - name: Run E2E tests on production
         run: npm run test:e2e
         env:
-          PLAYWRIGHT_BASE_URL: https://tr-tb-dev.github.io/genesys_home_assigment/
+          PLAYWRIGHT_BASE_URL: ${{ needs.deploy.outputs.page_url }}
           PLAYWRIGHT_SKIP_WEBSERVER: true
 
       - name: Upload Playwright Report as artifact
