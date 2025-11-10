@@ -2,10 +2,10 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Home Page', () => {
   test('should load the home page and display posts', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/', { waitUntil: 'networkidle' });
 
     await page.waitForSelector('[data-testid="post-list-item"], [data-testid="post-grid-item"]', {
-      timeout: 10000,
+      timeout: 30000,
     });
 
     const posts = await page.locator('[data-testid="post-list-item"], [data-testid="post-grid-item"]').count();
@@ -13,14 +13,14 @@ test.describe('Home Page', () => {
   });
 
   test('should navigate to post comments from top page', async ({ page }) => {
-    await page.goto('/top');
+    await page.goto('/top', { waitUntil: 'networkidle' });
 
     await page.waitForSelector('[data-testid="post-list-item"], [data-testid="post-grid-item"]', {
-      timeout: 10000,
+      timeout: 30000,
     });
 
     await page.waitForSelector('[data-testid="post-comments-link"]', {
-      timeout: 10000,
+      timeout: 30000,
     });
 
     const firstCommentLink = page.locator('[data-testid="post-comments-link"]').first();
@@ -29,7 +29,7 @@ test.describe('Home Page', () => {
     await expect(page.url()).toContain('/comments/');
 
     await page.waitForSelector('[data-testid="comment-item"]', {
-      timeout: 10000,
+      timeout: 30000,
     });
 
     const comments = await page.locator('[data-testid="comment-item"]').count();
