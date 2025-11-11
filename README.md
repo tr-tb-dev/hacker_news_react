@@ -11,24 +11,30 @@
 
 * Modern React-based partial implementation(News, Top News) for Hacker News
 * Material-UI components
-* TypeScript codebase
 * Real time post and comment update with Firebase WebSocket 
 * List and grid view layouts for posts
 * Page setting options with localStorage saving
 * Navigation between Top Posts and New Posts
 * Pagination support for browsing through pages
-* Comment viewing for posts
-* Internationalization (i18n) support with react-intl
-* E2E testing with Playwright
-* UNIT testing with Vitest
+* Comments viewing for posts
+* Multilanguage support for static text elements
+
+# Technical stack
+
+* React, Redux, Redux-Saga
+* Typescript
+* react-intl Internationalization support 
+* E2E testing with Playwright with demonstrational purposes
+* UNIT testing with Vitest with demonstrational purposes
 
 # Live Demo & Reports
 
 * **Live Demo:** [https://tr-tb-dev.github.io/genesys_home_assigment/](https://tr-tb-dev.github.io/genesys_home_assigment/)
 * **E2E Test Report:** [https://tr-tb-dev.github.io/genesys_home_assigment/e2e/](https://tr-tb-dev.github.io/genesys_home_assigment/e2e/)
-* **Unit Coverage Report:** [https://tr-tb-dev.github.io/genesys_home_assigment/coverage/](https://tr-tb-dev.github.io/genesys_home_assigment/coverage/)
+* **Unit Test Coverage Report:** [https://tr-tb-dev.github.io/genesys_home_assigment/coverage/](https://tr-tb-dev.github.io/genesys_home_assigment/coverage/)
 
-# Further improvement possibilities
+# Further improvement & ideas
+* Add more unit tests to reach more code coverage over the codebase
 * Continue Hacker News feature implementation ( polls etc..)
 * Saving user settings from localStore to cloud-based settings (FlagSmith)(authentication required)
 * Multi-language support with translation management tool (Crowdin)
