@@ -73,6 +73,7 @@ export default [
       'react/jsx-uses-vars': 'error',
       'prettier/prettier': 'error',
       'no-unused-vars': 'off',
+      'no-undef': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {
