@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/798c60bb-153c-4161-86dc-6a264b525a96" alt="HN React" width="400" /> 
 </p>
 
-# HN - React 
+# Hacker News - React variant implementation
 [![Build](https://img.shields.io/badge/Build-Deployed-2EA44F)](https://tr-tb-dev.github.io/genesys_home_assigment/)
 [![E2E Tests](https://img.shields.io/badge/E2E%20Tests-Report%20Available-007EC6)](https://tr-tb-dev.github.io/genesys_home_assigment/e2e/)
 [![Coverage](https://img.shields.io/badge/Unit%20Coverage-View%20Report-9B40A5)](https://tr-tb-dev.github.io/genesys_home_assigment/coverage/)
@@ -44,9 +44,10 @@
 ## Build
 
 ```bash
+npm i
 npm run dev
 ```
-## Test
+## Tests
 
 ```bash
 npm run test
