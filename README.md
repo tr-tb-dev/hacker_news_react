@@ -48,4 +48,14 @@ npm run test:coverage
 npm run test:e2e
 npm run test:e2e:report
 ```
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/249ac603-d04c-4c32-afd3-ea11f6ef2578" alt="HN React Site - Comments - light" width="80%"/> 
+</p>
+<p></p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/926e9bf2-2235-4ea2-b1f8-c3cafc26f0e2" alt="HN React Site - New Posts - dark" width="80%"/> 
+</p>
+
+
+
 
