@@ -9,10 +9,11 @@
 
 # Features
 
-* Modern React-based implementation for Hacker News
+* Modern React-based partial implementation(News, Top News) for Hacker News
 * Material-UI components
 * TypeScript codebase
-* List and grid view layouts
+* Real time post and comment update with Firebase WebSocket 
+* List and grid view layouts for posts
 * Page setting options with localStorage saving
 * Navigation between Top Posts and New Posts
 * Pagination support for browsing through pages
@@ -21,7 +22,7 @@
 * E2E testing with Playwright
 * UNIT testing with Vitest
 
-# Live Demo & Examples
+# Live Demo & Reports
 
 * **Live Demo:** [https://tr-tb-dev.github.io/genesys_home_assigment/](https://tr-tb-dev.github.io/genesys_home_assigment/)
 * **E2E Test Report:** [https://tr-tb-dev.github.io/genesys_home_assigment/e2e/](https://tr-tb-dev.github.io/genesys_home_assigment/e2e/)
