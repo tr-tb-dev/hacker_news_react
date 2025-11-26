@@ -146,7 +146,7 @@ jobs:
       - name: Run E2E tests on production
         run: npm run test:e2e
         env:
-          PLAYWRIGHT_BASE_URL: https://tr-tb-dev.github.io/genesys_home_assigment
+          PLAYWRIGHT_BASE_URL: https://tr-tb-dev.github.io/hacker_news_react
           PLAYWRIGHT_SKIP_WEBSERVER: true
 
       - name: Upload Playwright Report as artifact

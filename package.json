@@ -19,15 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tr-tb-dev/genesys_home_assigment.git"
+    "url": "git+https://github.com/tr-tb-dev/hacker_news_react.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tr-tb-dev/genesys_home_assigment/issues"
+    "url": "https://github.com/tr-tb-dev/hacker_news_react/issues"
   },
-  "homepage": "https://github.com/tr-tb-dev/genesys_home_assigment#readme",
+  "homepage": "https://github.com/tr-tb-dev/hacker_news_react#readme",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
