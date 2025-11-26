@@ -1,14 +1,15 @@
 import { takeLatest, put, select } from 'redux-saga/effects';
 import { initApp } from '@/store/actions/appActions';
-import { setTheme, setLanguage, setViewMode, setFontSize } from '@/store/reducers/settings/settings-actions';
+import { setTheme, setLanguage, setViewMode, setFontSize, setDataSource } from '@/store/reducers/settings/settings-actions';
 import {
   selectTheme,
   selectLanguage,
   selectFontSize,
   selectViewMode,
+  selectDataSource,
 } from '@/store/reducers/settings/settings-selectors';
 import { dataLoaded } from '@/store/actions/appActions';
-import { ThemeMode, Language, FontSize, ViewMode } from '@/enums/settings';
+import { ThemeMode, Language, FontSize, ViewMode, DataSource } from '@/enums/settings';
 
 const STORAGE_KEY = 'hacker_news_v3';
 
@@ -28,11 +29,15 @@ function isValidViewMode(viewMode: unknown): viewMode is ViewMode {
   return Object.values(ViewMode).includes(viewMode as ViewMode);
 }
 
+function isValidDataSource(dataSource: unknown): dataSource is DataSource {
+  return Object.values(DataSource).includes(dataSource as DataSource);
+}
+
 function* loadFromLocalStorage(): Generator {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
-      const { theme, language, fontSize, viewMode } = JSON.parse(stored);
+      const { theme, language, fontSize, viewMode, dataSource } = JSON.parse(stored);
       if (theme && isValidTheme(theme)) {
         yield put(setTheme(theme));
       }
@@ -44,6 +49,9 @@ function* loadFromLocalStorage(): Generator {
       }
       if (viewMode && isValidViewMode(viewMode)) {
         yield put(setViewMode(viewMode));
+      }
+      if (dataSource && isValidDataSource(dataSource)) {
+        yield put(setDataSource(dataSource));
       }
     }
     yield put(dataLoaded());
@@ -59,7 +67,8 @@ function* saveToLocalStorage(): Generator {
     const language: Language = yield select(selectLanguage);
     const fontSize: FontSize = yield select(selectFontSize);
     const viewMode: ViewMode = yield select(selectViewMode);
-    const data = { theme, language, fontSize, viewMode };
+    const dataSource: DataSource = yield select(selectDataSource);
+    const data = { theme, language, fontSize, viewMode, dataSource };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   } catch (error) {
     console.error('Error saving to localStorage:', error);
@@ -68,5 +77,5 @@ function* saveToLocalStorage(): Generator {
 
 export default function* localStorageSaga(): Generator {
   yield takeLatest(initApp.type, loadFromLocalStorage);
-  yield takeLatest([setTheme.type, setLanguage.type, setViewMode.type, setFontSize.type], saveToLocalStorage);
+  yield takeLatest([setTheme.type, setLanguage.type, setViewMode.type, setFontSize.type, setDataSource.type], saveToLocalStorage);
 }

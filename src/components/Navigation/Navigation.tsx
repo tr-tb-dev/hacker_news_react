@@ -6,6 +6,7 @@ import ViewModeToggle from '@/components/settings/ViewModeToggle/ViewModeToggle'
 import ThemeToggle from '@/components/settings/ThemeToggle/ThemeToggle';
 import LanguageSelector from '@/components/settings/LanguageSelector/LanguageSelector';
 import FontSizeToggle from '@/components/settings/FontSizeToggle/FontSizeToggle';
+import DataSourceToggle from '@/components/settings/DataSourceToggle/DataSourceToggle';
 
 function Navigation() {
   const theme = useTheme();
@@ -77,6 +78,7 @@ function Navigation() {
         <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }} aria-label="Settings">
           <ViewModeToggle />
           <FontSizeToggle />
+          <DataSourceToggle />
           <LanguageSelector />
           <ThemeToggle />
         </Box>

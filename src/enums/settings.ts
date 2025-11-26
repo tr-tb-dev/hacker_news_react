@@ -17,3 +17,8 @@ export enum FontSize {
   Small = 14,
   Large = 16,
 }
+
+export enum DataSource {
+  ReduxSaga = 'redux-saga',
+  TanStack = 'tanstack',
+}
