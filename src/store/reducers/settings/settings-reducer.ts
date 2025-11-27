@@ -1,4 +1,10 @@
-import { setTheme, setLanguage, setViewMode, setFontSize, setDataSource } from '@/store/reducers/settings/settings-actions';
+import {
+  setTheme,
+  setLanguage,
+  setViewMode,
+  setFontSize,
+  setDataSource,
+} from '@/store/reducers/settings/settings-actions';
 import { Action } from '@/helpers/actionHelper';
 import { ThemeMode, Language, ViewMode, FontSize, DataSource } from '@/enums/settings';
 

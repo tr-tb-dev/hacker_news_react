@@ -1,6 +1,12 @@
 import { takeLatest, put, select } from 'redux-saga/effects';
 import { initApp } from '@/store/actions/appActions';
-import { setTheme, setLanguage, setViewMode, setFontSize, setDataSource } from '@/store/reducers/settings/settings-actions';
+import {
+  setTheme,
+  setLanguage,
+  setViewMode,
+  setFontSize,
+  setDataSource,
+} from '@/store/reducers/settings/settings-actions';
 import {
   selectTheme,
   selectLanguage,
@@ -77,5 +83,8 @@ function* saveToLocalStorage(): Generator {
 
 export default function* localStorageSaga(): Generator {
   yield takeLatest(initApp.type, loadFromLocalStorage);
-  yield takeLatest([setTheme.type, setLanguage.type, setViewMode.type, setFontSize.type, setDataSource.type], saveToLocalStorage);
+  yield takeLatest(
+    [setTheme.type, setLanguage.type, setViewMode.type, setFontSize.type, setDataSource.type],
+    saveToLocalStorage
+  );
 }

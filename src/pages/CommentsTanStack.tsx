@@ -138,7 +138,11 @@ function CommentsTanStack() {
   const { postId } = useParams<{ postId: string }>();
   const postIdNum = postId ? parseInt(postId, 10) : 0;
 
-  const { data: comments = [], isLoading, error } = useQuery({
+  const {
+    data: comments = [],
+    isLoading,
+    error,
+  } = useQuery({
     queryKey: ['comments', postIdNum],
     queryFn: () => fetchPostComments(postIdNum),
     enabled: !!postId,
